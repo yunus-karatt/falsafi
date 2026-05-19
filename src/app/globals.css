@@ -1,26 +1,93 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand: #249516;
+  --color-brand-glow: rgba(36, 149, 22, 0.15);
+  --color-brand-glow-strong: rgba(36, 149, 22, 0.4);
+  --color-brand-hover: #2eb41e;
+  --color-brand-dark: #196f0f;
+  
+  --font-syne: var(--font-syne), sans-serif;
+  --font-body: var(--font-plus-jakarta), sans-serif;
+
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: var(--font-plus-jakarta), sans-serif;
+  overflow-x: hidden;
 }
+
+/* Custom Utilities for cinematic glowing borders & scrollbars */
+.glow-border {
+  position: relative;
+}
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(to bottom right, rgba(36, 149, 22, 0.4), transparent 50%, rgba(36, 149, 22, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Smooth custom scrollbars for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #249516;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-glow {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(36, 149, 22, 0.15);
+  box-shadow: 0 4px 30px rgba(36, 149, 22, 0.05);
+}
+
+/* Art/creative class page custom styling */
+.paint-stroke {
+  background: linear-gradient(120deg, #249516 0%, #196f0f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

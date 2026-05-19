@@ -1,0 +1,6 @@
+# Crawlers configuration for Falsafi Website
+User-agent: *
+Allow: /
+
+# Expose Sitemap
+Sitemap: https://falsafi.ae/sitemap.xml
