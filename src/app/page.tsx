@@ -9,18 +9,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import MobileCTA from "@/components/MobileCTA";
-import AnimatedCounter from "@/components/AnimatedCounter";
 import BeforeAfter from "@/components/BeforeAfter";
 import FaqAccordion from "@/components/FaqAccordion";
 import { servicesData } from "@/data/servicesData";
 import { portfolioData } from "@/data/portfolioData";
-
-const stats = [
-  { value: 1500, suffix: "+", label: "Projects Completed" },
-  { value: 12, suffix: "+", label: "Years in UAE" },
-  { value: 98, suffix: "%", label: "Client Satisfaction" },
-  { value: 350, suffix: "+", label: "LED Screens Installed" },
-];
 
 const faqs = [
   {
@@ -72,93 +64,105 @@ const testimonials = [
 export default function Home() {
   // Grab a few featured portfolio items
   const featuredPortfolio = portfolioData.slice(0, 4);
+  const marqueeServices = servicesData.flatMap((category) =>
+    category.services.map((service) => service.title)
+  );
+  const marqueeItems = [...marqueeServices, ...marqueeServices];
 
   return (
     <>
       <Navbar />
-      
-      {/* 1. Cinematic Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-20">
-        {/* Background visual graphics */}
-        <div className="absolute inset-0 w-full h-full opacity-40">
-          <Image
-            src="/images/hero-bg.svg"
-            alt="Falsafi Creative Showroom"
-            fill
-            priority
-            className="object-cover"
-          />
-        </div>
-        
-        {/* Neon Green Accent Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10" />
-        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-brand/5 rounded-full blur-[150px] pointer-events-none" />
-        <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-brand/10 rounded-full blur-[130px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-20 text-center flex flex-col items-center">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-950/80 border border-zinc-800 backdrop-blur-md mb-8 text-brand font-body text-xs font-semibold tracking-widest uppercase"
-          >
-            <Shield className="w-3.5 h-3.5" />
-            Complete Advertising &amp; Branding Solutions UAE
-          </motion.div>
+      {/* 1. Hero Section */}
+      <section className="relative min-h-screen   bg-black w-full overflow-hidden pt-24 pb-16 md:pt-28 md:pb-20">
+        {/* <Image
+          src="/images/hero.jpg"
+          alt="Falsafi Creative Showroom"
+          fill
+          priority
+          className=" opacity-30 absolute object-contain "
+        /> */}
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-syne text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight text-white max-w-5xl leading-[1.1] mb-6"
-          >
-            ELEVATE YOUR VISION WITH <span className="text-brand">FALSAFI.</span>
-          </motion.h1>
+        <div style={{ backgroundImage: `url('/images/hero.jpg')` }} className="absolute inset-0 bg-no-repeat bg-top-right opacity-40"></div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-body text-zinc-400 text-base md:text-xl max-w-2xl leading-relaxed mb-10"
-          >
-            We design, fabricate, and install premium LED displays, 3D custom sign boards, fleet vehicle graphics, and large-format print media for high-end brands in Ajman, Dubai, and Sharjah.
-          </motion.p>
+        <div className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-black/40 z-10" />
+        <div className="absolute -top-40 -left-40 w-125 h-125 bg-brand/10 rounded-full blur-[150px] pointer-events-none" />
+        <div className="absolute -bottom-20 -right-20 w-100 h-100 bg-brand/10 rounded-full blur-[130px] pointer-events-none" />
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
-          >
-            <Link
-              href="/contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand text-black font-body text-sm font-extrabold tracking-wider uppercase hover:bg-brand-hover hover:scale-105 transition-all duration-300 shadow-[0_4px_25px_rgba(36,149,22,0.3)] text-center"
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-20">
+          <div className="flex items-center justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl"
             >
-              Get Free Consultation
-            </Link>
-            <Link
-              href="/services"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-zinc-950/80 border border-zinc-800 text-white font-body text-sm font-semibold tracking-wider uppercase hover:bg-zinc-900 hover:border-zinc-700 transition-all duration-300 text-center"
-            >
-              Explore Services
-            </Link>
-          </motion.div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-950/80 border border-zinc-800 backdrop-blur-md mb-6 text-brand font-body text-[11px] font-semibold tracking-[0.2em] uppercase">
+                <Shield className="w-3.5 h-3.5" />
+                Ajman - Dubai - Sharjah
+              </div>
+
+              <h1 className="font-syne text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight text-white leading-[1.05] mb-6">
+                The <span className="text-brand">Complete</span>
+                <br className="hidden sm:block" /> Advertising Solution
+              </h1>
+
+              <p className="font-body text-zinc-300 text-sm sm:text-base md:text-lg max-w-xl mx-auto leading-relaxed mb-8">
+                Launch-ready signage, branding, printing, and installation services for businesses across the UAE, delivered with premium quality and fast execution.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto mb-8 justify-center">
+                <Link
+                  href="/contact"
+                  className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand text-black font-body text-sm font-extrabold tracking-wider uppercase hover:bg-brand-hover hover:scale-105 transition-all duration-300 shadow-[0_4px_25px_rgba(36,149,22,0.3)] text-center"
+                >
+                  Get Free Consultation
+                </Link>
+                <Link
+                  href="/services"
+                  className="w-full sm:w-auto px-8 py-4 rounded-full bg-zinc-950/80 border border-zinc-800 text-white font-body text-sm font-semibold tracking-wider uppercase hover:bg-zinc-900 hover:border-zinc-700 transition-all duration-300 text-center"
+                >
+                  Explore Services
+                </Link>
+              </div>
+
+              <div className="grid grid-cols-3 gap-3 max-w-md mx-auto">
+                {["Signage", "Branding", "Printing"].map((item) => (
+                  <div key={item} className="rounded-xl border border-zinc-800 bg-zinc-950/70 px-3 py-2">
+                    <p className="font-body text-[11px] sm:text-xs uppercase tracking-widest text-zinc-400">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* 2. Stats Section */}
-      <section className="py-12 bg-black border-y border-zinc-900 relative z-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center justify-center text-center">
-              <span className="font-syne text-4xl md:text-5xl font-extrabold text-white mb-2 flex items-center justify-center">
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-              </span>
-              <span className="font-body text-xs md:text-sm text-zinc-500 uppercase tracking-widest font-medium">
-                {stat.label}
-              </span>
-            </div>
-          ))}
+      {/* 2. Opening Soon Services Marquee */}
+      <section className="py-4 bg-black border-y border-zinc-900 relative z-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 mb-3">
+          <p className="font-body text-[11px] md:text-xs uppercase tracking-[0.28em] text-zinc-500 text-center">
+            Shop Opening Soon - Services You Can Book
+          </p>
+        </div>
+
+        <div className="relative">
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-linear-to-r from-black to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-linear-to-l from-black to-transparent z-10" />
+
+          <div className="marquee-track flex w-max items-center gap-3 md:gap-4 py-2 md:py-3">
+            {marqueeItems.map((item, index) => (
+              <div
+                key={`${item}-${index}`}
+                className="shrink-0 inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-950/80 px-4 md:px-5 py-2 md:py-2.5"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-brand" />
+                <span className="font-body text-xs md:text-sm font-semibold tracking-wide text-zinc-200 whitespace-nowrap">
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -311,7 +315,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredPortfolio.map((item, index) => (
+            {featuredPortfolio.map((item) => (
               <div
                 key={item.id}
                 className="group relative aspect-square rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-850"
@@ -323,7 +327,7 @@ export default function Home() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
-                
+
                 {/* Hover overlay panel */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6 z-10">
                   <span className="font-body text-[10px] font-bold text-brand uppercase tracking-wider mb-1.5">
@@ -410,7 +414,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <div className="relative rounded-3xl overflow-hidden glass-panel-glow p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-[0_15px_40px_rgba(36,149,22,0.05)]">
             <div className="absolute top-0 right-0 w-96 h-96 bg-brand/5 rounded-full blur-[100px] pointer-events-none" />
-            
+
             <div className="max-w-xl text-center lg:text-left relative z-10">
               <h2 className="font-syne text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight">
                 Ready to transform your business visual presence?
