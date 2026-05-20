@@ -29,7 +29,7 @@ export const servicesData: ServiceCategory[] = [
         description: "High-definition indoor and outdoor LED display screens for vibrant, dynamic advertising in Dubai and Ajman.",
         longDescription: "Our LED displays feature high-brightness, Energy-efficient SMD technology, custom sizes, and seamless video playback. Perfect for storefronts, shopping malls, billboards, and event staging across the UAE.",
         iconName: "Tv",
-        image: "/images/services/led-display.svg",
+        image: "/images/services/led-display.jpg",
         gallery: ["/images/services/led-display.svg", "/images/gallery/signage-1.svg", "/images/gallery/signage-2.svg"]
       },
       {
@@ -39,8 +39,8 @@ export const servicesData: ServiceCategory[] = [
         description: "Interactive digital kiosks, smart information boards, and wall-mounted advertising monitors.",
         longDescription: "Transform how you communicate with clients. Our premium digital signage systems offer remote content scheduling, ultra-thin profiles, interactive touch capabilities, and robust enclosures designed for continuous operations.",
         iconName: "MonitorCheck",
-        image: "/images/services/digital-signage.svg",
-        gallery: ["/images/services/digital-signage.svg", "/images/gallery/signage-3.svg"]
+        image: "/images/services/digital-signage.jpg",
+        gallery: ["/images/services/digital-signage.jpg", "/images/gallery/signage-3.svg"]
       },
       {
         id: "indoor-outdoor-sign-boards",
@@ -49,8 +49,8 @@ export const servicesData: ServiceCategory[] = [
         description: "Elegant 2D and 3D sign boards crafted from acrylic, metal, brass, and stainless steel with LED backlighting.",
         longDescription: "Professional sign board fabrication using high-grade materials. Our 3D channel letters are precision-laser cut and fitted with Samsung LED illumination for maximum visibility and architectural prestige in Dubai and Ajman.",
         iconName: "Sparkles",
-        image: "/images/services/3d-signs.svg",
-        gallery: ["/images/services/3d-signs.svg", "/images/gallery/signage-4.svg", "/images/gallery/signage-5.svg"]
+        image: "/images/services/3d-signs.png",
+        gallery: ["/images/services/3d-signs.png", "/images/gallery/signage-4.svg", "/images/gallery/signage-5.svg"]
       },
       {
         id: "external-interior-signage",
@@ -59,8 +59,8 @@ export const servicesData: ServiceCategory[] = [
         description: "Comprehensive corporate signages including lobby logos, direction boards, room plates, and exterior branding facades.",
         longDescription: "Create a cohesive brand journey. From welcoming architectural lobby signs in high-polished brass to external building facade pylons, Falsafi designs and installs signs that command attention.",
         iconName: "LayoutGrid",
-        image: "/images/services/interior-signage.svg",
-        gallery: ["/images/services/interior-signage.svg", "/images/gallery/signage-6.svg"]
+        image: "/images/services/interior-signage.png",
+        gallery: ["/images/services/interior-signage.png", "/images/gallery/signage-6.svg"]
       },
       {
         id: "road-signage",
@@ -69,8 +69,8 @@ export const servicesData: ServiceCategory[] = [
         description: "Reflective and regulatory road signs manufactured strictly according to RTA and UAE municipality standards.",
         longDescription: "Heavy-duty aluminum signs with high-intensity reflective sheeting (3M). We produce parking signs, traffic signs, safety signs, and customized wayfinding signboards for residential and commercial complexes.",
         iconName: "Compass",
-        image: "/images/services/road-signage.svg",
-        gallery: ["/images/services/road-signage.svg", "/images/gallery/signage-7.svg"]
+        image: "/images/services/road-signage.png",
+        gallery: ["/images/services/road-signage.png", "/images/gallery/signage-7.svg"]
       }
     ]
   },
@@ -86,8 +86,8 @@ export const servicesData: ServiceCategory[] = [
         description: "Complete store frontage wraps, wall murals, window decals, and high-impact custom wallpaper installations.",
         longDescription: "Convert bare spaces into dynamic sales funnels. We utilize high-quality vinyl wraps, frosted glass decals, and custom wall graphics to branding offices, retail outlets, and showrooms across Ajman and Dubai.",
         iconName: "Palette",
-        image: "/images/services/outdoor-branding.svg",
-        gallery: ["/images/services/outdoor-branding.svg", "/images/gallery/branding-1.svg"]
+        image: "/images/services/outdoor-branding.png",
+        gallery: ["/images/services/outdoor-branding.png", "/images/gallery/branding-1.svg"]
       },
       {
         id: "vehicle-graphics",
@@ -96,8 +96,8 @@ export const servicesData: ServiceCategory[] = [
         description: "Mobile advertising for cars, delivery vans, pickup trucks, and corporate fleets with premium protective laminate.",
         longDescription: "Turn your vehicle fleet into moving billboards. From simple cut-vinyl logos and contact info to full visual vehicle wraps, Falsafi uses premium cast vinyls (3M/Avery) that survive extreme UAE heat.",
         iconName: "Car",
-        image: "/images/services/vehicle-graphics.svg",
-        gallery: ["/images/services/vehicle-graphics.svg", "/images/gallery/vehicle-1.svg", "/images/gallery/vehicle-2.svg"]
+        image: "/images/services/vehicle-graphics.png",
+        gallery: ["/images/services/vehicle-graphics.png", "/images/gallery/vehicle-1.svg", "/images/gallery/vehicle-2.svg"]
       },
       {
         id: "exhibition-events",
@@ -106,8 +106,8 @@ export const servicesData: ServiceCategory[] = [
         description: "Bespoke media walls, event backdrops, stage designs, and registration desks for exhibitions and corporate events.",
         longDescription: "Make a statement at Dubai World Trade Centre or any UAE venue. We design, fabricate, and install premium photo backdrops, red-carpet event walls, roll-up displays, and temporary event setups.",
         iconName: "Ticket",
-        image: "/images/services/exhibition-events.svg",
-        gallery: ["/images/services/exhibition-events.svg", "/images/gallery/events-1.svg"]
+        image: "/images/services/exhibition-events.png",
+        gallery: ["/images/services/exhibition-events.png", "/images/gallery/events-1.svg"]
       },
       {
         id: "custom-stand",
@@ -116,8 +116,8 @@ export const servicesData: ServiceCategory[] = [
         description: "Unique, custom-engineered wooden and metal exhibition stands and product display kiosks.",
         longDescription: "Go beyond standard shell schemes. Our designers create immersive 3D custom stands equipped with lighting, integrated product displays, and lounge sections, fully managed from concept to dismantle.",
         iconName: "Store",
-        image: "/images/services/custom-stands.svg",
-        gallery: ["/images/services/custom-stands.svg", "/images/gallery/events-2.svg"]
+        image: "/images/services/custom-stands.jpg",
+        gallery: ["/images/services/custom-stands.jpg", "/images/gallery/events-2.svg"]
       }
     ]
   },
@@ -133,7 +133,7 @@ export const servicesData: ServiceCategory[] = [
         description: "High-quality corporate flyers, tri-fold brochures, booklets, and leaflets with custom finishes.",
         longDescription: "Printed on premium paper stocks ranging from 150gsm to 350gsm. Select from matte, gloss, velvet lamination, spot UV, or gold-foil accenting to leave an indelible impression.",
         iconName: "FileText",
-        image: "/images/services/printing-flyers.svg",
+        image: "/images/services/printing-flyers.png",
         gallery: ["/images/services/printing-flyers.svg", "/images/gallery/printing-1.svg"]
       },
       {
@@ -143,7 +143,7 @@ export const servicesData: ServiceCategory[] = [
         description: "Premium visiting cards: luxury cotton cards, plastic cards, embossed cards, and luxury gold metallic foil cards.",
         longDescription: "Your business card is a physical handshake. We offer custom die-cuts, round corners, extra-thick painted edges, and luxurious soft-touch textures to ensure your networking counts.",
         iconName: "Contact",
-        image: "/images/services/visiting-cards.svg",
+        image: "/images/services/visiting-cards.png",
         gallery: ["/images/services/visiting-cards.svg", "/images/gallery/printing-2.svg"]
       },
       {
@@ -153,7 +153,7 @@ export const servicesData: ServiceCategory[] = [
         description: "Dye-sublimation fabric printing for corporate flags, tension fabric lightboxes, and promotional banners.",
         longDescription: "Using weather-resistant textile dyes, we print high-resolution custom flags, table throws, backdrops, and trade show fabrics that can be washed and reused without fading.",
         iconName: "Shirt",
-        image: "/images/services/fabric-printing.svg",
+        image: "/images/services/fabric-printing.png",
         gallery: ["/images/services/fabric-printing.svg", "/images/gallery/printing-3.svg"]
       },
       {
@@ -163,7 +163,7 @@ export const servicesData: ServiceCategory[] = [
         description: "Wide-format outdoor flex banners, rollup banners, mesh grids, and high-fidelity fine art canvas printing.",
         longDescription: "Wide-format printing up to 5 meters wide. Our outdoor flex banners are UV-resistant and windproof, while our fine-art canvas prints are stretched on premium wooden frames, perfect for gallery displays.",
         iconName: "Image",
-        image: "/images/services/canvas-banners.svg",
+        image: "/images/services/canvas-banners.png",
         gallery: ["/images/services/canvas-banners.svg", "/images/gallery/printing-4.svg"]
       }
     ]
@@ -180,7 +180,7 @@ export const servicesData: ServiceCategory[] = [
         description: "Branded corporate diaries, customized ceramic mugs, executive pens, thermal bottles, and gift sets.",
         longDescription: "Premium branding solutions for corporate giveaways. We offer high-quality laser engraving, UV flatbed printing, and screen printing on metals, plastics, leather, and wood.",
         iconName: "Gift",
-        image: "/images/services/gift-printing.svg",
+        image: "/images/services/gift-printing.png",
         gallery: ["/images/services/gift-printing.svg", "/images/gallery/gifts-1.svg"]
       },
       {
@@ -190,7 +190,7 @@ export const servicesData: ServiceCategory[] = [
         description: "High-resolution plastic PVC ID cards, security access cards, and custom printed lanyards.",
         longDescription: "Produce official employee ID cards, membership cards, and visitor passes. Complete with barcodes, magnetic strips, smart chips, and personalized heavy-duty custom neck lanyards.",
         iconName: "UserCheck",
-        image: "/images/services/id-cards.svg",
+        image: "/images/services/id-cards.png",
         gallery: ["/images/services/id-cards.svg", "/images/gallery/gifts-2.svg"]
       },
       {
@@ -200,7 +200,7 @@ export const servicesData: ServiceCategory[] = [
         description: "Exquisite crystal, acrylic, and wooden trophies, medals, and recognition plaques with laser engraving.",
         longDescription: "Honor excellence with customized awards. We design and engrave luxurious crystal blocks, acrylic shapes, and wooden shields complete with metal plates and glowing colors.",
         iconName: "Trophy",
-        image: "/images/services/trophies.svg",
+        image: "/images/services/trophies.png",
         gallery: ["/images/services/trophies.svg", "/images/gallery/gifts-3.svg"]
       },
       {
@@ -210,7 +210,7 @@ export const servicesData: ServiceCategory[] = [
         description: "Custom embroidery and heat-transfer screen printing for corporate t-shirts, caps, and uniforms.",
         longDescription: "Equip your team with branded caps, polo shirts, and safety jackets. We specialize in durable embroidery and high-definition direct-to-garment (DTG) printing that holds up to industrial washing.",
         iconName: "Footprints",
-        image: "/images/services/cap-printing.svg",
+        image: "/images/services/cap-printing.png",
         gallery: ["/images/services/cap-printing.svg", "/images/gallery/gifts-4.svg"]
       }
     ]
@@ -227,7 +227,7 @@ export const servicesData: ServiceCategory[] = [
         description: "Comprehensive painting, sketching, and canvas art instruction for kids and adults.",
         longDescription: "Nurture the artist within. Falsafi Art Academy runs structured evening and weekend classes led by professional artists. Learn acrylic painting, charcoal sketching, watercolor techniques, and portrait design.",
         iconName: "Brush",
-        image: "/images/services/art-classes.svg",
+        image: "/images/services/art-classes.png",
         gallery: ["/images/services/art-classes.svg", "/images/gallery/art-1.svg", "/images/gallery/art-2.svg"]
       }
     ]

@@ -15,18 +15,18 @@
 }
 
 :root {
-  --background: #000000;
+  --background: #171719;
   --foreground: #ffffff;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: #000000;
+  background-color: #171719;
   color: #ffffff;
 }
 
 body {
-  background-color: #000000;
+  background-color: #171719;
   color: #ffffff;
   font-family: var(--font-plus-jakarta), sans-serif;
   overflow-x: hidden;
@@ -89,5 +89,22 @@ body {
   background: linear-gradient(120deg, #249516 0%, #196f0f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 36s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
 }
 

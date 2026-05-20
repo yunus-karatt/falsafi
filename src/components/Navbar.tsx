@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -48,13 +49,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <span className="font-syne text-2xl font-extrabold tracking-wider text-white">
-            FALSAFI<span className="text-brand">.</span>
-          </span>
-          <span className="hidden sm:inline-block font-body text-[9px] uppercase tracking-[0.3em] text-zinc-500 group-hover:text-brand transition-colors duration-300 ml-1">
-            Advertising & Branding
-          </span>
+        <Link href="/" className="flex items-center group" aria-label="Falsafi home">
+          <Image
+            src="/images/logo.png"
+            alt="Falsafi Signs logo"
+            width={280}
+            height={112}
+            priority
+            className="h-12 md:h-14 w-auto"
+          />
         </Link>
 
         {/* Desktop Nav Links */}

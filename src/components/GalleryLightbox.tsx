@@ -11,8 +11,8 @@ interface LightboxItem {
   categoryLabel: string;
   description: string;
   image: string;
-  client: string;
-  location: string;
+  client?: string;
+  location?: string;
 }
 
 interface GalleryLightboxProps {
