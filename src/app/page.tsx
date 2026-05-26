@@ -3,7 +3,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Star, Shield, Cpu, Zap, Award, CheckCircle } from "lucide-react";
+import {
+  ArrowRight,
+  Star,
+  Shield,
+  Cpu,
+  Zap,
+  Award,
+  CheckCircle,
+} from "lucide-react";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -17,24 +25,29 @@ import { portfolioData } from "@/data/portfolioData";
 const faqs = [
   {
     question: "What types of signage do you design and install?",
-    answer: "Falsafi designs, fabricates, and installs a comprehensive range of signboards including 3D illuminated letters (acrylic, stainless steel, brass), large-format LED digital display screens, exterior pylon pylons, safety signs, interior office lobby signage, and road direction signboards compliant with UAE municipality regulations."
+    answer:
+      "Falsafi designs, fabricates, and installs a comprehensive range of signboards including 3D illuminated letters (acrylic, stainless steel, brass), large-format LED digital display screens, exterior pylon pylons, safety signs, interior office lobby signage, and road direction signboards compliant with UAE municipality regulations.",
   },
   {
     question: "Do you handle vehicle wraps for company fleets?",
-    answer: "Yes, we specialize in high-end vehicle wraps and fleet graphics for vans, pickup trucks, trucks, and cars. We utilize premium heat-resistant cast vinyls (like 3M and Avery Dennison) designed specifically to endure the extreme summer heat of Dubai and Ajman without peeling or fading."
+    answer:
+      "Yes, we specialize in high-end vehicle wraps and fleet graphics for vans, pickup trucks, trucks, and cars. We utilize premium heat-resistant cast vinyls (like 3M and Avery Dennison) designed specifically to endure the extreme summer heat of Dubai and Ajman without peeling or fading.",
   },
   {
     question: "How do I get a custom quote for my project?",
-    answer: "You can request a quote by clicking our 'Get Quote' buttons to submit our contact form, or initiate an instant chat with our technical advisors via the floating WhatsApp button. We typically provide digital estimation drafts and initial 3D design mockups within 2 to 24 hours depending on project size."
+    answer:
+      "You can request a quote by clicking our 'Get Quote' buttons to submit our contact form, or initiate an instant chat with our technical advisors via the floating WhatsApp button. We typically provide digital estimation drafts and initial 3D design mockups within 2 to 24 hours depending on project size.",
   },
   {
     question: "Where are your services available in the UAE?",
-    answer: "Our primary showroom and production facility are located in Ajman, but we provide design, site inspection, and installation services across all Emirates, including Dubai, Sharjah, Abu Dhabi, and Umm Al Quwain."
+    answer:
+      "Our primary showroom and production facility are located in Ajman, but we provide design, site inspection, and installation services across all Emirates, including Dubai, Sharjah, Abu Dhabi, and Umm Al Quwain.",
   },
   {
     question: "Do you offer custom stands and backdrops for exhibitions?",
-    answer: "Absolutely. Falsafi is a complete branding provider. We fabricate custom wooden exhibition booths, fabric backdrops, media walls, registration counters, and roll-up banners for corporate summits, award galas, and trade shows at DWTC, ADNEC, and other major UAE venues."
-  }
+    answer:
+      "Absolutely. Falsafi is a complete branding provider. We fabricate custom wooden exhibition booths, fabric backdrops, media walls, registration counters, and roll-up banners for corporate summits, award galas, and trade shows at DWTC, ADNEC, and other major UAE venues.",
+  },
 ];
 
 const testimonials = [
@@ -42,30 +55,33 @@ const testimonials = [
     name: "Tariq Al-Mansoori",
     role: "Marketing Director",
     company: "Ajman Retail Properties",
-    content: "Falsafi fabricated our new storefront 3D LED logo and double-sided external pylon. The quality of fabrication and metal welding is top-notch, and the LEDs are incredibly bright even in direct sunlight. Excellent local team!",
-    rating: 5
+    content:
+      "Falsafi fabricated our new storefront 3D LED logo and double-sided external pylon. The quality of fabrication and metal welding is top-notch, and the LEDs are incredibly bright even in direct sunlight. Excellent local team!",
+    rating: 5,
   },
   {
     name: "Sarah Jenkins",
     role: "Events Manager",
     company: "Vertex Summit Dubai",
-    content: "We hired Falsafi for our event media walls and custom fabric backdrops at Dubai World Trade Centre. They accommodated our last-minute design tweaks and completed the full site setup ahead of schedule. Highly recommended!",
-    rating: 5
+    content:
+      "We hired Falsafi for our event media walls and custom fabric backdrops at Dubai World Trade Centre. They accommodated our last-minute design tweaks and completed the full site setup ahead of schedule. Highly recommended!",
+    rating: 5,
   },
   {
     name: "Mohammed Ibrahim",
     role: "Operations Manager",
     company: "Gulf Logistics Fleet",
-    content: "Wrapped 15 of our delivery vans with vehicle branding. Falsafi used high-durability 3M vinyl and did a flawless job. Not a single bubble or peeling edge after 8 months of continuous UAE road driving.",
-    rating: 5
-  }
+    content:
+      "Wrapped 15 of our delivery vans with vehicle branding. Falsafi used high-durability 3M vinyl and did a flawless job. Not a single bubble or peeling edge after 8 months of continuous UAE road driving.",
+    rating: 5,
+  },
 ];
 
 export default function Home() {
   // Grab a few featured portfolio items
   const featuredPortfolio = portfolioData.slice(0, 4);
   const marqueeServices = servicesData.flatMap((category) =>
-    category.services.map((service) => service.title)
+    category.services.map((service) => service.title),
   );
   const marqueeItems = [...marqueeServices, ...marqueeServices];
 
@@ -74,32 +90,24 @@ export default function Home() {
       <Navbar />
 
       {/* 1. Hero Section */}
-      <section className="relative min-h-screen   bg-black w-full overflow-hidden pt-24 pb-16 md:pt-28 md:pb-20">
-        {/* <Image
-          src="/images/hero.jpg"
-          alt="Falsafi Creative Showroom"
-          fill
-          priority
-          className=" opacity-30 absolute object-contain "
-        /> */}
-
-        <div style={{ backgroundImage: `url('/images/hero.jpg')` }} className="absolute inset-0 bg-no-repeat bg-top-right opacity-40"></div>
+      <section className="relative min-h-screen w-screen flex bg-black overflow-hidden py-24 md:py-28 px-6 md:px-12">
+        {/* <div  className="absolute inset-0 bg-no-repeat bg-top-right opacity-40"></div>
 
         <div className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-black/40 z-10" />
         <div className="absolute -top-40 -left-40 w-125 h-125 bg-brand/10 rounded-full blur-[150px] pointer-events-none" />
-        <div className="absolute -bottom-20 -right-20 w-100 h-100 bg-brand/10 rounded-full blur-[130px] pointer-events-none" />
+        <div className="absolute -bottom-20 -right-20 w-100 h-100 bg-brand/10 rounded-full blur-[130px] pointer-events-none" /> */}
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-20">
+        <div className="flex-1 px-6 md:px-12 relative z-20">
           <div className="flex items-center justify-center">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl"
+              className="text-left max-w-4xl"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-950/80 border border-zinc-800 backdrop-blur-md mb-6 text-brand font-body text-[11px] font-semibold tracking-[0.2em] uppercase">
                 <Shield className="w-3.5 h-3.5" />
-                Ajman - Dubai - Sharjah
+                Ajman 
               </div>
 
               <h1 className="font-syne text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight text-white leading-[1.05] mb-6">
@@ -107,11 +115,13 @@ export default function Home() {
                 <br className="hidden sm:block" /> Advertising Solution
               </h1>
 
-              <p className="font-body text-zinc-300 text-sm sm:text-base md:text-lg max-w-xl mx-auto leading-relaxed mb-8">
-                Launch-ready signage, branding, printing, and installation services for businesses across the UAE, delivered with premium quality and fast execution.
+              <p className="font-body text-zinc-300 text-sm sm:text-base md:text-lg  leading-relaxed mb-8">
+                Launch-ready signage, branding, printing, and installation
+                services for businesses across the UAE, delivered with premium
+                quality and fast execution.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto mb-8 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full  mb-8 justify-start">
                 <Link
                   href="/contact"
                   className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand text-black font-body text-sm font-extrabold tracking-wider uppercase hover:bg-brand-hover hover:scale-105 transition-all duration-300 shadow-[0_4px_25px_rgba(36,149,22,0.3)] text-center"
@@ -126,15 +136,30 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="grid grid-cols-3 gap-3 max-w-md mx-auto">
+              <div className="grid grid-cols-3 gap-3 max-w-md ">
                 {["Signage", "Branding", "Printing"].map((item) => (
-                  <div key={item} className="rounded-xl border border-zinc-800 bg-zinc-950/70 px-3 py-2">
-                    <p className="font-body text-[11px] sm:text-xs uppercase tracking-widest text-zinc-400">{item}</p>
+                  <div
+                    key={item}
+                    className="rounded-xl text-center border border-zinc-800 bg-zinc-950/70 px-3 py-2"
+                  >
+                    <p className="font-body text-[11px] sm:text-xs uppercase tracking-widest text-zinc-400">
+                      {item}
+                    </p>
                   </div>
                 ))}
               </div>
             </motion.div>
           </div>
+        </div>
+        <div className="flex-1 relative min-h-[300px]  md:min-h-[480px] lg:min-h-[600px]">
+          <Image
+            src="/images/hero.jpg"
+            alt="Falsafi Creative Showroom"
+            fill
+            priority
+            className="object-cover  shadow-2xl"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
       </section>
 
@@ -142,7 +167,7 @@ export default function Home() {
       <section className="py-4 bg-black border-y border-zinc-900 relative z-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12 mb-3">
           <p className="font-body text-[11px] md:text-xs uppercase tracking-[0.28em] text-zinc-500 text-center">
-            Shop Opening Soon - Services You Can Book
+             Services You Can Book
           </p>
         </div>
 
@@ -157,7 +182,7 @@ export default function Home() {
                 className="shrink-0 inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-950/80 px-4 md:px-5 py-2 md:py-2.5"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-brand" />
-                <span className="font-body text-xs md:text-sm font-semibold tracking-wide text-zinc-200 whitespace-nowrap">
+                <span className="font-body  text-xs md:text-sm font-semibold tracking-wide text-zinc-200 whitespace-nowrap">
                   {item}
                 </span>
               </div>
@@ -198,7 +223,12 @@ export default function Home() {
 
                 <div className="relative z-10">
                   <span className="text-zinc-700 font-syne text-5xl font-extrabold block mb-6 group-hover:text-brand/20 transition-colors">
-                    0{category.id === "signage" ? 1 : category.id === "branding" ? 2 : 3}
+                    0
+                    {category.id === "signage"
+                      ? 1
+                      : category.id === "branding"
+                        ? 2
+                        : 3}
                   </span>
                   <h3 className="font-syne text-xl md:text-2xl font-bold text-white mb-4">
                     {category.title}
@@ -211,7 +241,10 @@ export default function Home() {
                 <div className="relative z-10 mt-8 border-t border-zinc-900 pt-6">
                   <ul className="flex flex-col gap-2.5 font-body text-xs md:text-sm text-zinc-500">
                     {category.services.slice(0, 3).map((srv) => (
-                      <li key={srv.id} className="flex items-center gap-2 group-hover:text-zinc-300 transition-colors">
+                      <li
+                        key={srv.id}
+                        className="flex items-center gap-2 group-hover:text-zinc-300 transition-colors"
+                      >
                         <CheckCircle className="w-3.5 h-3.5 text-brand shrink-0" />
                         {srv.title}
                       </li>
@@ -241,7 +274,9 @@ export default function Home() {
               Behold the Transformation
             </h2>
             <p className="font-body text-zinc-400 text-sm md:text-base max-w-xl mx-auto">
-              See how we transformed a standard, unbranded commercial frontage into a high-visibility, premium retail facade using illuminated dimensional sign boards and glass graphics.
+              See how we transformed a standard, unbranded commercial frontage
+              into a high-visibility, premium retail facade using illuminated
+              dimensional sign boards and glass graphics.
             </p>
           </div>
 
@@ -263,18 +298,43 @@ export default function Home() {
               From Blueprint to Installation
             </h2>
             <p className="font-body text-zinc-400 text-sm md:text-base max-w-lg mx-auto">
-              Our structured 4-step workflow ensures your advertising assets are delivered on time, within budget, and built to survive UAE outdoor climates.
+              Our structured 4-step workflow ensures your advertising assets are
+              delivered on time, within budget, and built to survive UAE outdoor
+              climates.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { icon: Cpu, step: "01", title: "Consultation & Site Survey", desc: "Our engineers inspect your location, measure dimensions, analyze architectural lightings, and check local municipality codes." },
-              { icon: Zap, step: "02", title: "Creative 3D Rendering", desc: "Our branding team models your signboards, fleet wraps, or exhibition booths in 3D so you can review details before production." },
-              { icon: Award, step: "03", title: "Precision Fabrication", desc: "Utilizing CNC routing, fiber-lasers, and high-frequency welding machines in our Ajman production warehouse." },
-              { icon: Shield, step: "04", title: "Professional Installation", desc: "Equipped with cranes and safety harnesses, our certified technicians secure the signage and configure electronic LEDs." }
+              {
+                icon: Cpu,
+                step: "01",
+                title: "Consultation & Site Survey",
+                desc: "Our engineers inspect your location, measure dimensions, analyze architectural lightings, and check local municipality codes.",
+              },
+              {
+                icon: Zap,
+                step: "02",
+                title: "Creative 3D Rendering",
+                desc: "Our branding team models your signboards, fleet wraps, or exhibition booths in 3D so you can review details before production.",
+              },
+              {
+                icon: Award,
+                step: "03",
+                title: "Precision Fabrication",
+                desc: "Utilizing CNC routing, fiber-lasers, and high-frequency welding machines in our Ajman production warehouse.",
+              },
+              {
+                icon: Shield,
+                step: "04",
+                title: "Professional Installation",
+                desc: "Equipped with cranes and safety harnesses, our certified technicians secure the signage and configure electronic LEDs.",
+              },
             ].map((p, i) => (
-              <div key={i} className="flex flex-col p-6 rounded-2xl bg-black border border-zinc-900 hover:border-zinc-800 transition-all">
+              <div
+                key={i}
+                className="flex flex-col p-6 rounded-2xl bg-black border border-zinc-900 hover:border-zinc-800 transition-all"
+              >
                 <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center text-brand mb-6 border border-brand/20">
                   <p.icon className="w-5 h-5" />
                 </div>
@@ -358,13 +418,17 @@ export default function Home() {
               Trusted by Top Brands in UAE
             </h2>
             <p className="font-body text-zinc-400 text-sm md:text-base max-w-lg mx-auto">
-              Read feedback from business owners, architects, and event coordinators who rely on Falsafi for their corporate branding.
+              Read feedback from business owners, architects, and event
+              coordinators who rely on Falsafi for their corporate branding.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
-              <div key={i} className="rounded-2xl bg-black border border-zinc-900 p-8 flex flex-col justify-between">
+              <div
+                key={i}
+                className="rounded-2xl bg-black border border-zinc-900 p-8 flex flex-col justify-between"
+              >
                 <div>
                   <div className="flex items-center gap-1 mb-6 text-brand">
                     {Array.from({ length: t.rating }).map((_, rIdx) => (
@@ -381,7 +445,9 @@ export default function Home() {
                     {t.name[0]}
                   </div>
                   <div className="flex flex-col font-body">
-                    <span className="text-sm font-bold text-white">{t.name}</span>
+                    <span className="text-sm font-bold text-white">
+                      {t.name}
+                    </span>
                     <span className="text-xs text-zinc-500">
                       {t.role}, {t.company}
                     </span>
@@ -420,7 +486,9 @@ export default function Home() {
                 Ready to transform your business visual presence?
               </h2>
               <p className="font-body text-zinc-400 text-sm md:text-base leading-relaxed">
-                Connect with our local fabrication engineers in Ajman &amp; Dubai. Get site measurements, structural calculations, and custom brand designs.
+                Connect with our local fabrication engineers in Ajman &amp;
+                Dubai. Get site measurements, structural calculations, and
+                custom brand designs.
               </p>
             </div>
 
