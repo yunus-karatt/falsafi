@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://falsafi.ae";
-  const routes = ["", "/about", "/services", "/portfolio", "/art", "/contact"];
+  const routes = ["", "/about", "/services", "/art", "/contact"];
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,

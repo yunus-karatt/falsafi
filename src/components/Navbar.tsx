@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -12,7 +12,6 @@ const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/art", label: "Fine Art" },
   { href: "/about", label: "About" },
-  { href: "/portfolio", label: "Portfolio" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -20,6 +19,24 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+
+  useEffect(() => {
+    const isLight = document.documentElement.classList.contains("light");
+    setTheme(isLight ? "light" : "dark");
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    if (nextTheme === "light") {
+      document.documentElement.classList.add("light");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.remove("light");
+      localStorage.setItem("theme", "dark");
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,8 +102,15 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* CTA Button */}
-        <div className="hidden md:flex items-center">
+        {/* Theme Switcher & CTA Button */}
+        <div className="hidden md:flex items-center gap-4">
+          <button
+            onClick={toggleTheme}
+            className="p-2.5 rounded-full border border-zinc-800 bg-zinc-900 text-white hover:text-brand hover:border-brand hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
           <Link
             href="/contact"
             className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-zinc-900 border border-zinc-800 text-white font-body text-sm font-semibold tracking-wide hover:bg-brand hover:border-brand transition-all duration-300 group"
@@ -145,6 +169,23 @@ export default function Navbar() {
               transition={{ delay: 0.3 }}
               className="mt-auto flex flex-col gap-4 border-t border-zinc-900 pt-8"
             >
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm font-body font-semibold text-white">Theme</span>
+                <button
+                  onClick={toggleTheme}
+                  className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-800 bg-zinc-900 text-white hover:text-brand hover:border-brand hover:scale-102 active:scale-[0.98] transition-all cursor-pointer text-xs"
+                >
+                  {theme === "dark" ? (
+                    <>
+                      <Sun className="w-3.5 h-3.5" /> Light Mode
+                    </>
+                  ) : (
+                    <>
+                      <Moon className="w-3.5 h-3.5" /> Dark Mode
+                    </>
+                  )}
+                </button>
+              </div>
               <p className="text-zinc-500 font-body text-xs tracking-wider uppercase">
                 Ajman & Dubai, UAE
               </p>

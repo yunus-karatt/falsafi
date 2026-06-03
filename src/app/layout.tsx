@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Syne, Plus_Jakarta_Sans } from "next/font/google";
+import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const syne = Syne({
-  variable: "--font-syne",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
@@ -74,8 +74,30 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${plusJakarta.variable} h-full scroll-smooth`}
+      className={`${outfit.variable} ${plusJakarta.variable} h-full scroll-smooth`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('theme');
+                  var theme = saved === 'light' || saved === 'dark' ? saved : 'dark';
+                  if (!saved) {
+                    localStorage.setItem('theme', 'dark');
+                  }
+                  if (theme === 'light') {
+                    document.documentElement.classList.add('light');
+                  } else {
+                    document.documentElement.classList.remove('light');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-black text-white antialiased">
         {children}
       </body>

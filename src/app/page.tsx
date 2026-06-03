@@ -105,7 +105,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-left max-w-4xl"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-950/80 border border-zinc-800 backdrop-blur-md mb-6 text-brand font-body text-[11px] font-semibold tracking-[0.2em] uppercase">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-950/80 border border-zinc-800 backdrop-blur-md mb-6 text-brand font-body text-xs font-semibold tracking-[0.2em] uppercase">
                 <Shield className="w-3.5 h-3.5" />
                 Ajman 
               </div>
@@ -142,7 +142,7 @@ export default function Home() {
                     key={item}
                     className="rounded-xl text-center border border-zinc-800 bg-zinc-950/70 px-3 py-2"
                   >
-                    <p className="font-body text-[11px] sm:text-xs uppercase tracking-widest text-zinc-400">
+                    <p className="font-body text-xs sm:text-sm uppercase tracking-widest text-zinc-400">
                       {item}
                     </p>
                   </div>
@@ -166,7 +166,7 @@ export default function Home() {
       {/* 2. Opening Soon Services Marquee */}
       <section className="py-4 bg-black border-y border-zinc-900 relative z-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12 mb-3">
-          <p className="font-body text-[11px] md:text-xs uppercase tracking-[0.28em] text-zinc-500 text-center">
+          <p className="font-body text-xs md:text-sm uppercase tracking-[0.28em] text-zinc-500 text-center">
              Services You Can Book
           </p>
         </div>
@@ -239,7 +239,7 @@ export default function Home() {
                 </div>
 
                 <div className="relative z-10 mt-8 border-t border-zinc-900 pt-6">
-                  <ul className="flex flex-col gap-2.5 font-body text-xs md:text-sm text-zinc-500">
+                  <ul className="flex flex-col gap-2.5 font-body text-sm text-zinc-500">
                     {category.services.slice(0, 3).map((srv) => (
                       <li
                         key={srv.id}
@@ -338,13 +338,13 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center text-brand mb-6 border border-brand/20">
                   <p.icon className="w-5 h-5" />
                 </div>
-                <span className="font-syne text-xs font-bold text-zinc-600 mb-2 uppercase tracking-widest">
+                <span className="font-syne text-sm font-bold text-zinc-500 mb-2 uppercase tracking-widest">
                   Step {p.step}
                 </span>
                 <h3 className="font-syne text-base md:text-lg font-bold text-white mb-3">
                   {p.title}
                 </h3>
-                <p className="font-body text-xs md:text-sm text-zinc-400 leading-relaxed">
+                <p className="font-body text-sm md:text-base text-zinc-400 leading-relaxed">
                   {p.desc}
                 </p>
               </div>
@@ -353,7 +353,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. Featured Gallery Preview */}
+      {/* 6. Featured Gallery Preview - Hidden until shop inauguration
       <section className="py-24 bg-black relative z-20">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mb-16">
@@ -388,15 +388,14 @@ export default function Home() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
 
-                {/* Hover overlay panel */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6 z-10">
-                  <span className="font-body text-[10px] font-bold text-brand uppercase tracking-wider mb-1.5">
+                  <span className="font-body text-xs font-bold text-brand uppercase tracking-wider mb-1.5">
                     {item.categoryLabel}
                   </span>
                   <h3 className="font-syne text-base font-bold text-white leading-tight mb-2">
                     {item.title}
                   </h3>
-                  <div className="flex items-center justify-between text-zinc-500 text-xs border-t border-zinc-800 pt-2.5 mt-1.5 font-body">
+                  <div className="flex items-center justify-between text-zinc-500 text-sm border-t border-zinc-800 pt-2.5 mt-1.5 font-body">
                     <span>{item.client}</span>
                     <span>{item.location}</span>
                   </div>
@@ -406,6 +405,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* 7. Client Testimonials */}
       <section className="py-24 bg-zinc-950 relative z-20">
@@ -448,7 +448,7 @@ export default function Home() {
                     <span className="text-sm font-bold text-white">
                       {t.name}
                     </span>
-                    <span className="text-xs text-zinc-500">
+                    <span className="text-sm text-zinc-500">
                       {t.role}, {t.company}
                     </span>
                   </div>

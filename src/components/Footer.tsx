@@ -72,12 +72,6 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/portfolio" className="hover:text-brand transition-colors flex items-center gap-1 group">
-                <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                Project Showcase
-              </Link>
-            </li>
-            <li>
               <Link href="/art" className="hover:text-brand transition-colors flex items-center gap-1 group">
                 <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                 Fine Art Academy
@@ -157,14 +151,14 @@ export default function Footer() {
               <Clock className="w-4 h-4 text-brand shrink-0 mt-0.5" />
               <div className="flex flex-col">
                 <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
-                <span className="text-zinc-500 text-xs">Sunday: Closed</span>
+                <span className="text-zinc-500 text-sm">Sunday: Closed</span>
               </div>
             </li>
           </ul>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto border-t border-zinc-900/80 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body text-xs text-zinc-500 relative z-10">
+      <div className="max-w-7xl mx-auto border-t border-zinc-900/80 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body text-sm text-zinc-500 relative z-10">
         <p>&copy; {currentYear} Falsafi Advertising. All Rights Reserved.</p>
         <div className="flex items-center gap-6">
           <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>

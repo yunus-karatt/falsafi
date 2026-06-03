@@ -199,7 +199,7 @@ export default function About() {
               <h4 className="font-syne text-base md:text-lg font-bold text-white mb-2">
                 100% In-House Assembly
               </h4>
-              <p className="font-body text-xs md:text-sm text-zinc-500 leading-relaxed">
+              <p className="font-body text-sm text-zinc-500 leading-relaxed">
                 No third-party markups. We own our CNC cutters, metal benders, wide format printers, and LED configuration setups.
               </p>
             </div>
@@ -210,7 +210,7 @@ export default function About() {
               <h4 className="font-syne text-base md:text-lg font-bold text-white mb-2">
                 Extreme Climate Tested
               </h4>
-              <p className="font-body text-xs md:text-sm text-zinc-500 leading-relaxed">
+              <p className="font-body text-sm text-zinc-500 leading-relaxed">
                 All metals, acrylic coatings, and vinyl wraps are calibrated to withstand the harsh UV and salinity elements of Ajman and Dubai coasts.
               </p>
             </div>
@@ -221,7 +221,7 @@ export default function About() {
               <h4 className="font-syne text-base md:text-lg font-bold text-white mb-2">
                 Municipality Compliance
               </h4>
-              <p className="font-body text-xs md:text-sm text-zinc-500 leading-relaxed">
+              <p className="font-body text-sm text-zinc-500 leading-relaxed">
                 We handle layouts and certification drafts compliant with RTA, Civil Defense, and local municipalities for safe facade sign board setups.
               </p>
             </div>

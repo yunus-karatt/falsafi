@@ -102,7 +102,7 @@ export default function Services() {
   }, [activeFilter, allServices]);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0b] text-white overflow-hidden">
+    <div className="min-h-screen bg-black text-white overflow-hidden">
       <Navbar />
 
       {/* Hero Section */}
