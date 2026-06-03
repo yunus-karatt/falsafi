@@ -501,7 +501,7 @@ export default function Home() {
                 Inquire Online
               </Link>
               <a
-                href="https://wa.me/971585183720?text=Hello%20Falsafi,%20I%20would%20like%2520to%2520schedule%2520a%2520free%2520signage%2520consultation."
+                href="https://wa.me/919497200005?text=Hello%20Falsafi,%20I%20would%20like%2520to%2520schedule%2520a%2520free%2520signage%2520consultation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-body text-sm font-bold uppercase tracking-wider hover:bg-zinc-850 transition-all text-center flex items-center justify-center gap-2"

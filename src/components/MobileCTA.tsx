@@ -11,7 +11,7 @@ interface MobileCTAProps {
 
 export default function MobileCTA({
   phoneNumber = "00971585183720",
-  whatsappNumber = "971585183720",
+  whatsappNumber = "919497200005",
   whatsappMessage = "Hello Falsafi, I would like to inquire about your advertising and branding services.",
 }: MobileCTAProps) {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;

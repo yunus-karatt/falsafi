@@ -22,7 +22,7 @@ function ContactContent() {
     }
   }, [searchParams]);
 
-  const whatsappUrl = `https://wa.me/971585183720?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/919497200005?text=${encodeURIComponent(
     "Hello Falsafi, I would like to schedule a site inspection and get a quote for a new branding project in UAE."
   )}`;
 
@@ -87,11 +87,11 @@ function ContactContent() {
                     Phone Numbers
                   </h4>
                   <div className="flex flex-col">
-                    <a href="tel:+97167428888" className="hover:text-brand transition-colors">
-                      Office: +971 6 742 8888
+                    <a href="tel:00971585183720" className="hover:text-brand transition-colors">
+                      Office: 00971 585183720
                     </a>
-                    <a href="tel:00971585183720" className="hover:text-brand transition-colors font-semibold">
-                      WhatsApp/Direct: 00971 585183720
+                    <a href="tel:00919497200005" className="hover:text-brand transition-colors font-semibold">
+                      WhatsApp/Direct: 0091 9497200005
                     </a>
                   </div>
                 </div>

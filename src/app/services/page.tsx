@@ -202,7 +202,7 @@ export default function Services() {
               Get a Quote
             </Link>
             <a
-              href="https://wa.me/971585183720"
+              href="https://wa.me/919497200005"
               className="w-full sm:w-auto px-10 py-5 rounded-full border border-zinc-800 text-white font-bold uppercase tracking-widest text-sm hover:bg-zinc-900 transition-all"
             >
               WhatsApp
