@@ -133,18 +133,15 @@ export default function Footer() {
             <li className="flex items-center gap-3">
               <Phone className="w-4 h-4 text-brand shrink-0" />
               <div className="flex flex-col">
-                <a href="tel:+97167428888" className="hover:text-white transition-colors">
-                  +971 6 742 8888
-                </a>
-                <a href="tel:+971507861234" className="hover:text-white transition-colors">
-                  +971 50 786 1234
+                <a href="tel:00971585183720" className="hover:text-white transition-colors">
+                  00971 585183720
                 </a>
               </div>
             </li>
             <li className="flex items-center gap-3">
               <Mail className="w-4 h-4 text-brand shrink-0" />
-              <a href="mailto:info@falsafi.ae" className="hover:text-white transition-colors">
-                info@falsafi.ae
+              <a href="mailto:falsafi.signs@gmail.com" className="hover:text-white transition-colors">
+                falsafi.signs@gmail.com
               </a>
             </li>
             <li className="flex items-start gap-3">

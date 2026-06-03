@@ -9,7 +9,7 @@ interface WhatsAppButtonProps {
 }
 
 export default function WhatsAppButton({
-  phoneNumber = "971507861234", // Local UAE phone number format (no leading + or 00)
+  phoneNumber = "971585183720", // E.164-compatible format for wa.me links
   defaultMessage = "Hello Falsafi, I am interested in your advertising and branding solutions. I would like to get a quote.",
 }: WhatsAppButtonProps) {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;

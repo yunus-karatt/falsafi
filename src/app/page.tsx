@@ -90,38 +90,38 @@ export default function Home() {
       <Navbar />
 
       {/* 1. Hero Section */}
-      <section className="relative min-h-screen w-screen flex bg-black overflow-hidden py-24 md:py-28 px-6 md:px-12">
+      <section className="relative min-h-screen bg-black overflow-hidden py-20 md:py-24 px-4 sm:px-6 md:px-12">
         {/* <div  className="absolute inset-0 bg-no-repeat bg-top-right opacity-40"></div>
 
         <div className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-black/40 z-10" />
         <div className="absolute -top-40 -left-40 w-125 h-125 bg-brand/10 rounded-full blur-[150px] pointer-events-none" />
         <div className="absolute -bottom-20 -right-20 w-100 h-100 bg-brand/10 rounded-full blur-[130px] pointer-events-none" /> */}
 
-        <div className="flex-1 px-6 md:px-12 relative z-20">
-          <div className="flex items-center justify-center">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12">
+          <div className="relative z-20">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-left max-w-4xl"
+              className="text-center lg:text-left max-w-3xl mx-auto lg:mx-0"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-950/80 border border-zinc-800 backdrop-blur-md mb-6 text-brand font-body text-xs font-semibold tracking-[0.2em] uppercase">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-950/80 border border-zinc-800 backdrop-blur-md mb-5 text-brand font-body text-xs font-semibold tracking-[0.2em] uppercase">
                 <Shield className="w-3.5 h-3.5" />
-                Ajman 
+                Ajman
               </div>
 
-              <h1 className="font-syne text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight text-white leading-[1.05] mb-6">
+              <h1 className="font-syne text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight text-white leading-[1.05] mb-5 md:mb-6">
                 The <span className="text-brand">Complete</span>
                 <br className="hidden sm:block" /> Advertising Solution
               </h1>
 
-              <p className="font-body text-zinc-300 text-sm sm:text-base md:text-lg  leading-relaxed mb-8">
+              <p className="font-body text-zinc-300 text-sm sm:text-base md:text-lg leading-relaxed mb-7 md:mb-8">
                 Launch-ready signage, branding, printing, and installation
                 services for businesses across the UAE, delivered with premium
                 quality and fast execution.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full  mb-8 justify-start">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full mb-7 md:mb-8 justify-center lg:justify-start">
                 <Link
                   href="/contact"
                   className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand text-black font-body text-sm font-extrabold tracking-wider uppercase hover:bg-brand-hover hover:scale-105 transition-all duration-300 shadow-[0_4px_25px_rgba(36,149,22,0.3)] text-center"
@@ -136,11 +136,11 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="grid grid-cols-3 gap-3 max-w-md ">
+              <div className="grid grid-cols-3 gap-2 sm:gap-3 max-w-md mx-auto lg:mx-0">
                 {["Signage", "Branding", "Printing"].map((item) => (
                   <div
                     key={item}
-                    className="rounded-xl text-center border border-zinc-800 bg-zinc-950/70 px-3 py-2"
+                    className="rounded-xl text-center border border-zinc-800 bg-zinc-950/70 px-2.5 py-2"
                   >
                     <p className="font-body text-xs sm:text-sm uppercase tracking-widest text-zinc-400">
                       {item}
@@ -150,16 +150,17 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
-        </div>
-        <div className="flex-1 relative min-h-[300px]  md:min-h-[480px] lg:min-h-[600px]">
-          <Image
-            src="/images/hero.jpg"
-            alt="Falsafi Creative Showroom"
-            fill
-            priority
-            className="object-cover  shadow-2xl"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
+
+          <div className="relative min-h-80 sm:min-h-96 md:min-h-120 lg:min-h-150 rounded-3xl overflow-hidden">
+            <Image
+              src="/images/hero.jpg"
+              alt="Falsafi Creative Showroom"
+              fill
+              priority
+              className="object-cover shadow-2xl"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
         </div>
       </section>
 
@@ -500,7 +501,7 @@ export default function Home() {
                 Inquire Online
               </Link>
               <a
-                href="https://wa.me/971507861234?text=Hello%20Falsafi,%20I%20would%20like%2520to%2520schedule%2520a%2520free%2520signage%2520consultation."
+                href="https://wa.me/971585183720?text=Hello%20Falsafi,%20I%20would%20like%2520to%2520schedule%2520a%2520free%2520signage%2520consultation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-body text-sm font-bold uppercase tracking-wider hover:bg-zinc-850 transition-all text-center flex items-center justify-center gap-2"

@@ -151,7 +151,7 @@ export default function GalleryLightbox({
 
                 {/* Direct WhatsApp Inquiry for specific project */}
                 <a
-                  href={`https://wa.me/971507861234?text=${encodeURIComponent(
+                  href={`https://wa.me/971585183720?text=${encodeURIComponent(
                     `Hello Falsafi, I saw your portfolio item "${item.title}" and would like to get a quote for a similar project.`
                   )}`}
                   target="_blank"

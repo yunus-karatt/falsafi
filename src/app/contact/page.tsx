@@ -22,7 +22,7 @@ function ContactContent() {
     }
   }, [searchParams]);
 
-  const whatsappUrl = `https://wa.me/971507861234?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/971585183720?text=${encodeURIComponent(
     "Hello Falsafi, I would like to schedule a site inspection and get a quote for a new branding project in UAE."
   )}`;
 
@@ -90,8 +90,8 @@ function ContactContent() {
                     <a href="tel:+97167428888" className="hover:text-brand transition-colors">
                       Office: +971 6 742 8888
                     </a>
-                    <a href="tel:+971507861234" className="hover:text-brand transition-colors font-semibold">
-                      WhatsApp/Direct: +971 50 786 1234
+                    <a href="tel:00971585183720" className="hover:text-brand transition-colors font-semibold">
+                      WhatsApp/Direct: 00971 585183720
                     </a>
                   </div>
                 </div>
@@ -105,8 +105,8 @@ function ContactContent() {
                   <h4 className="font-syne text-xs font-bold uppercase tracking-wider text-zinc-500 mb-1">
                     Email
                   </h4>
-                  <a href="mailto:info@falsafi.ae" className="hover:text-brand transition-colors">
-                    info@falsafi.ae
+                  <a href="mailto:falsafi.signs@gmail.com" className="hover:text-brand transition-colors">
+                    falsafi.signs@gmail.com
                   </a>
                 </div>
               </li>
