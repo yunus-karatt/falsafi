@@ -22,7 +22,7 @@ function DynamicIcon({ name, className }: { name: string; className?: string }) 
 
 // Premium Service Card Component
 const ServiceCard = ({ service, index }: { service: Service; index: number }) => {
-  const whatsappUrl = `https://wa.me/971585183720?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/919497200005?text=${encodeURIComponent(
     `Hello Falsafi, I saw "${service.title}" in your catalog. May I know more details?`
   )}`;
 

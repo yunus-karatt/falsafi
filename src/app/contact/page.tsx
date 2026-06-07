@@ -58,7 +58,7 @@ function ContactContent() {
                 Falsafi Showroom &amp; Warehouse
               </h2>
               <p className="font-body text-sm md:text-base text-zinc-400 leading-relaxed">
-                Visit our production factory in Ajman or request a design advisor to visit your office location anywhere in Dubai, Sharjah, or Abu Dhabi.
+                Visit our showroom behind Nesto Hyper Market, Hamadia 1, Ajman, or request a design advisor to visit your office location anywhere in Dubai, Sharjah, or Abu Dhabi.
               </p>
             </div>
 
@@ -73,7 +73,7 @@ function ContactContent() {
                     Address
                   </h4>
                   <p className="text-zinc-300 leading-relaxed">
-                    Warehouse 14, Industrial Area 1, Ajman, United Arab Emirates
+                    Behind Nesto Hyper Market, Hamadia 1, Ajman, United Arab Emirates
                   </p>
                 </div>
               </li>
@@ -86,9 +86,12 @@ function ContactContent() {
                   <h4 className="font-syne text-xs font-bold uppercase tracking-wider text-zinc-500 mb-1">
                     Phone Numbers
                   </h4>
-                  <div className="flex flex-col">
-                    <a href="tel:00971585183720" className="hover:text-brand transition-colors">
-                      Office: 00971 585183720
+                  <div className="flex flex-col gap-0.5">
+                    <a href="tel:+971504884494" className="hover:text-brand transition-colors">
+                      +971 50 488 4494
+                    </a>
+                    <a href="tel:+971542507014" className="hover:text-brand transition-colors">
+                      +971 54 250 7014
                     </a>
                     <a href="tel:00919497200005" className="hover:text-brand transition-colors font-semibold">
                       WhatsApp/Direct: 0091 9497200005
@@ -197,16 +200,16 @@ function ContactContent() {
             {/* Dark mode overlay mask for the map to fit styling */}
             <div className="absolute inset-0 bg-brand/5 pointer-events-none mix-blend-color" />
             
-            {/* Google Map of Industrial Area Ajman */}
+            {/* Google Map - Nesto Hyper Market, Hamadia 1, Ajman */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14421.319766946353!2d55.4851214!3d25.4021295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f58356fd6ff19%3A0xc47e30d6bf43a2db!2sIndustrial%20Area%201%2C%20Ajman!5e0!3m2!1sen!2sae!4v1716183000000!5m2!1sen!2sae"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.8!2d55.5!3d25.41!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5b0000000001%3A0x0!2sNesto+Hyper+Market+Hamidiya+Ajman!5e0!3m2!1sen!2sae!4v1716183000000!5m2!1sen!2sae"
               width="100%"
               height="100%"
               style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) grayscale(80%)" }}
               allowFullScreen={false}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Falsafi Showroom Location Map Ajman"
+              title="Falsafi Showroom Location - Behind Nesto Hyper Market, Hamadia 1, Ajman"
             />
           </div>
         </div>

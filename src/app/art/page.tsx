@@ -65,10 +65,81 @@ const drawingFiles = [
   "IMG-20181015-WA0071.jpg"
 ];
 
+const fineArtFiles = [
+  "WhatsApp Image 2026-06-07 at 12.48.38 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.48.59 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.00 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.00 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.01 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.01 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.02 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.05 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.05 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.06 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.06 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.07 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.07 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.08 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.10 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.11 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.11 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.12 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.12 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.13 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.14 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.15 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.16 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.49.16 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.39 AM (2).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.40 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.42 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.42 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.43 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.44 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.44 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.45 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.46 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.46 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.47 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.47 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.48 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.48 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.49 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.49 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.50 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.50 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.51 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.51 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.52 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.53 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.53 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.54 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.57 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.57 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.58 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.58 AM (2).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.58 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.52.59 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.53.00 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.53.00 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.53.01 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.53.01 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.53.02 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.53.02 AM.jpeg",
+  "WhatsApp Image 2026-06-07 at 12.53.03 AM (1).jpeg",
+  "WhatsApp Image 2026-06-07 at 12.53.03 AM.jpeg",
+];
+
 const drawingGallery = drawingFiles.map((file, index) => ({
   id: `drawing-${index + 1}`,
   title: `Drawing Work ${index + 1}`,
   image: `/images/drawing/${encodeURIComponent(file)}`,
+}));
+
+const fineArtGallery = fineArtFiles.map((file, index) => ({
+  id: `fineart-${index + 1}`,
+  title: `Fine Art Work ${index + 1}`,
+  image: `/images/fineart/${encodeURIComponent(file)}`,
 }));
 
 export default function FineArtAcademy() {
@@ -117,6 +188,45 @@ export default function FineArtAcademy() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2  gap-6 md:gap-8">
             {drawingGallery.map((item) => (
+              <div
+                key={item.id}
+                className="group relative aspect-4/3 rounded-2xl overflow-hidden bg-zinc-950 border border-zinc-900 hover:border-brand/30 transition-colors duration-300"
+              >
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
+
+                <div className="absolute inset-x-0 bottom-0 p-5">
+                  <p className="font-body text-xs text-zinc-200 tracking-wide">
+                    {item.title}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Fine Art Gallery Section */}
+      <section className="pb-24 pt-8 bg-black">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-5">
+              Fine Art Gallery
+            </span>
+            <h2 className="font-syne text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+              Fine Art Works
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+            {fineArtGallery.map((item) => (
               <div
                 key={item.id}
                 className="group relative aspect-4/3 rounded-2xl overflow-hidden bg-zinc-950 border border-zinc-900 hover:border-brand/30 transition-colors duration-300"

@@ -128,13 +128,16 @@ export default function Footer() {
           <ul className="flex flex-col gap-4 font-body text-sm text-zinc-400">
             <li className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-brand shrink-0 mt-0.5" />
-              <span>Warehouse 14, Industrial Area 1, Ajman, United Arab Emirates</span>
+              <span>Behind Nesto Hyper Market, Hamadia 1, Ajman, United Arab Emirates</span>
             </li>
-            <li className="flex items-center gap-3">
-              <Phone className="w-4 h-4 text-brand shrink-0" />
-              <div className="flex flex-col">
-                <a href="tel:00971585183720" className="hover:text-white transition-colors">
-                  00971 585183720
+            <li className="flex items-start gap-3">
+               <Phone className="w-4 h-4 text-brand shrink-0 mt-0.5" />
+               <div className="flex flex-col gap-0.5">
+                <a href="tel:+971504884494" className="hover:text-white transition-colors">
+                  +971 50 488 4494
+                </a>
+                <a href="tel:+971542507014" className="hover:text-white transition-colors">
+                  +971 54 250 7014
                 </a>
               </div>
             </li>
