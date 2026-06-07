@@ -22,6 +22,8 @@ import FaqAccordion from "@/components/FaqAccordion";
 import { servicesData } from "@/data/servicesData";
 import { portfolioData } from "@/data/portfolioData";
 
+const horse_bg = "/images/horse_bg.png";
+
 const faqs = [
   {
     question: "What types of signage do you design and install?",
@@ -90,12 +92,18 @@ export default function Home() {
       <Navbar />
 
       {/* 1. Hero Section */}
-      <section className="relative min-h-screen bg-black overflow-hidden py-20 md:py-24 px-4 sm:px-6 md:px-12">
-        {/* <div  className="absolute inset-0 bg-no-repeat bg-top-right opacity-40"></div>
-
-        <div className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-black/40 z-10" />
-        <div className="absolute -top-40 -left-40 w-125 h-125 bg-brand/10 rounded-full blur-[150px] pointer-events-none" />
-        <div className="absolute -bottom-20 -right-20 w-100 h-100 bg-brand/10 rounded-full blur-[130px] pointer-events-none" /> */}
+      <section  className="relative min-h-screen bg-black overflow-hidden py-20 md:py-24 px-4 sm:px-6 md:px-12">
+        <div className="absolute inset-0 z-10">
+          <Image
+            src={horse_bg}
+            alt="Horse background for Falsafi hero section"
+            fill
+            priority
+            className="object-cover opacity-20"
+            sizes="100vw"
+          />
+          {/* <div className="absolute inset-0 block bg-black/70" suppressHydrationWarning /> */}
+        </div>
 
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12">
           <div className="relative z-20">
@@ -151,9 +159,9 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <div className="relative min-h-80 sm:min-h-96 md:min-h-120 lg:min-h-150 rounded-3xl overflow-hidden">
+          <div className="relative min-h-80 sm:min-h-96 md:min-h-120 lg:min-h-150 rounded-3xl overflow-hidden z-20">
             <Image
-              src="/images/hero.jpg"
+              src="/images/falsafi_hero.png"
               alt="Falsafi Creative Showroom"
               fill
               priority
