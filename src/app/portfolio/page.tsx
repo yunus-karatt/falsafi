@@ -62,7 +62,6 @@ export default function Portfolio() {
             className="object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-transparent z-10" />
         <div className="absolute -top-20 -right-20 w-[450px] h-[450px] bg-brand/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-20 text-center">

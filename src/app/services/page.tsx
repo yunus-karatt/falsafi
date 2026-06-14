@@ -14,16 +14,28 @@ import MobileCTA from "@/components/MobileCTA";
 import { servicesData, Service } from "@/data/servicesData";
 
 // Helper to render icons dynamically from name string
-function DynamicIcon({ name, className }: { name: string; className?: string }) {
+function DynamicIcon({
+  name,
+  className,
+}: {
+  name: string;
+  className?: string;
+}) {
   const IconComponent = (Icons as any)[name];
   if (!IconComponent) return <Icons.Circle className={className} />;
   return <IconComponent className={className} />;
 }
 
 // Premium Service Card Component
-const ServiceCard = ({ service, index }: { service: Service; index: number }) => {
+const ServiceCard = ({
+  service,
+  index,
+}: {
+  service: Service;
+  index: number;
+}) => {
   const whatsappUrl = `https://wa.me/919497200005?text=${encodeURIComponent(
-    `Hello Falsafi, I saw "${service.title}" in your catalog. May I know more details?`
+    `Hello Falsafi, I saw "${service.title}" in your catalog. May I know more details?`,
   )}`;
 
   return (
@@ -79,7 +91,8 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
           href={`/contact?service=${encodeURIComponent(service.title)}`}
           className="mt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-600 group-hover:text-brand/80 transition-colors flex items-center gap-2"
         >
-          Request Quote <div className="h-px flex-1 bg-zinc-800 group-hover:bg-brand/20 transition-colors" />
+          Request Quote{" "}
+          <div className="h-px flex-1 bg-zinc-800 group-hover:bg-brand/20 transition-colors" />
         </Link>
       </div>
     </motion.div>
@@ -91,14 +104,14 @@ export default function Services() {
 
   // Flatten and filter the services data
   const allServices = useMemo(() => {
-    return servicesData.flatMap(cat =>
-      cat.services.map(service => ({ ...service, categoryId: cat.id }))
+    return servicesData.flatMap((cat) =>
+      cat.services.map((service) => ({ ...service, categoryId: cat.id })),
     );
   }, []);
 
   const filteredServices = useMemo(() => {
     if (activeFilter === "all") return allServices;
-    return allServices.filter(service => service.categoryId === activeFilter);
+    return allServices.filter((service) => service.categoryId === activeFilter);
   }, [activeFilter, allServices]);
 
   return (
@@ -106,7 +119,18 @@ export default function Services() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 md:pt-48 md:pb-20 overflow-hidden">
+      <section className="relative pt-32 pb-16 mb-16 min-h-screen md:pt-48 md:pb-20 overflow-hidden">
+        <div className="absolute inset-0 z-10">
+          <Image
+            src="/images/horse_bg.png"
+            alt="Horse background for Falsafi hero section"
+            fill
+            priority
+            className="object-cover opacity-20"
+            sizes="100vw"
+          />
+          {/* <div className="absolute inset-0 block bg-black/70" suppressHydrationWarning /> */}
+        </div>
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-brand/5 blur-[120px] rounded-full opacity-50 pointer-events-none" />
 
         <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center">
@@ -125,7 +149,9 @@ export default function Services() {
                 <span className="text-brand">CATALOG.</span>
               </h1>
               <p className="font-body text-zinc-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-                Browse our complete collection of fabrication and branding services. Filter by category to find exactly what your project needs.
+                Browse our complete collection of fabrication and branding
+                services. Filter by category to find exactly what your project
+                needs.
               </p>
             </motion.div>
 
@@ -138,10 +164,11 @@ export default function Services() {
             >
               <button
                 onClick={() => setActiveFilter("all")}
-                className={`px-6 py-2.5 rounded-full text-xs font-semibold transition-all duration-500 border ${activeFilter === "all"
-                  ? "bg-brand border-brand text-black shadow-[0_10px_25px_rgba(36,149,22,0.3)]"
-                  : "bg-zinc-900/50 border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-white"
-                  }`}
+                className={`px-6 py-2.5 rounded-full text-xs font-semibold transition-all duration-500 border ${
+                  activeFilter === "all"
+                    ? "bg-brand border-brand text-black shadow-[0_10px_25px_rgba(36,149,22,0.3)]"
+                    : "bg-zinc-900/50 border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-white"
+                }`}
               >
                 SHOW ALL
               </button>
@@ -149,10 +176,11 @@ export default function Services() {
                 <button
                   key={category.id}
                   onClick={() => setActiveFilter(category.id)}
-                  className={`px-6 py-2.5 rounded-full text-xs font-semibold transition-all duration-500 border ${activeFilter === category.id
-                    ? "bg-brand border-brand text-black shadow-[0_10px_25px_rgba(36,149,22,0.3)]"
-                    : "bg-zinc-900/50 border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-white"
-                    }`}
+                  className={`px-6 py-2.5 rounded-full text-xs font-semibold transition-all duration-500 border ${
+                    activeFilter === category.id
+                      ? "bg-brand border-brand text-black shadow-[0_10px_25px_rgba(36,149,22,0.3)]"
+                      : "bg-zinc-900/50 border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-white"
+                  }`}
                 >
                   {category.title.replace("Solutions", "").toUpperCase()}
                 </button>
@@ -171,18 +199,16 @@ export default function Services() {
           >
             <AnimatePresence mode="popLayout">
               {filteredServices.map((service, idx) => (
-                <ServiceCard
-                  key={service.id}
-                  service={service}
-                  index={idx}
-                />
+                <ServiceCard key={service.id} service={service} index={idx} />
               ))}
             </AnimatePresence>
           </motion.div>
 
           {filteredServices.length === 0 && (
             <div className="py-20 text-center">
-              <p className="text-zinc-500 font-body">No services found in this category.</p>
+              <p className="text-zinc-500 font-body">
+                No services found in this category.
+              </p>
             </div>
           )}
         </div>

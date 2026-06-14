@@ -104,13 +104,13 @@ export default function Navbar() {
 
         {/* Theme Switcher & CTA Button */}
         <div className="hidden md:flex items-center gap-4">
-          <button
+          {/* <button
             onClick={toggleTheme}
             className="p-2.5 rounded-full border border-zinc-800 bg-zinc-900 text-white hover:text-brand hover:border-brand hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-          </button>
+          </button> */}
           <Link
             href="/contact"
             className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-zinc-900 border border-zinc-800 text-white font-body text-sm font-semibold tracking-wide hover:bg-brand hover:border-brand transition-all duration-300 group"
@@ -169,7 +169,7 @@ export default function Navbar() {
               transition={{ delay: 0.3 }}
               className="mt-auto flex flex-col gap-4 border-t border-zinc-900 pt-8"
             >
-              <div className="flex items-center justify-between mb-2">
+              {/* <div className="flex items-center justify-between mb-2">
                 <span className="text-sm font-body font-semibold text-white">Theme</span>
                 <button
                   onClick={toggleTheme}
@@ -185,7 +185,7 @@ export default function Navbar() {
                     </>
                   )}
                 </button>
-              </div>
+              </div> */}
               <p className="text-zinc-500 font-body text-xs tracking-wider uppercase">
                 Ajman & Dubai, UAE
               </p>

@@ -145,20 +145,19 @@ export default function FineArtAcademy() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center bg-black overflow-hidden pt-28 pb-16">
-        <div className="absolute inset-0 w-full h-full opacity-25">
+      <section className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-28 pb-16">
+        <div className="absolute inset-0 z-10">
           <Image
-            src="/images/services/art-classes.svg"
-            alt="Falsafi Painting Academy Studio"
+            src="/images/horse_bg.png"
+            alt="Falsafi hero background"
             fill
-            className="object-cover"
+            className="object-cover opacity-20"
           />
         </div>
-        <div className="absolute inset-0 bg-linear-to-t from-black via-black/85 to-transparent z-10" />
         {/* Glow behind header */}
         <div className="absolute -top-20 -left-20 w-112.5 h-112.5 bg-brand/5 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-20 text-center">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-30 text-center">
           <span className="text-brand font-body text-xs font-bold uppercase tracking-widest block mb-4">
             Creativity &amp; Education
           </span>
