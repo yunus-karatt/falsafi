@@ -22,7 +22,7 @@ import FaqAccordion from "@/components/FaqAccordion";
 import { servicesData } from "@/data/servicesData";
 import { portfolioData } from "@/data/portfolioData";
 
-const horse_bg = "/images/horse_bg.jpeg";
+const horse_bg = "/images/horse_bg.png";
 
 const faqs = [
   {
@@ -99,7 +99,7 @@ export default function Home() {
             alt="Horse background for Falsafi hero section"
             fill
             priority
-            className="object-cover opacity-60"
+            className="object-cover opacity-50"
             sizes="100vw"
           />
         </div>

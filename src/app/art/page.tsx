@@ -120,7 +120,7 @@ export default function FineArtAcademy() {
       {/* <section className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-28 pb-16">
         <div className="absolute inset-0 z-10">
           <Image
-            src="/images/horse_bg.jpeg"
+            src="/images/horse_bg.png"
             alt="Falsafi hero background"
             fill
             className="object-cover opacity-20"

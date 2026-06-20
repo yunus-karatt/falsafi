@@ -122,7 +122,7 @@ export default function Services() {
       <section className="relative pt-32 pb-16 mb-16 min-h-screen md:pt-48 md:pb-20 overflow-hidden">
         <div className="absolute inset-0 z-10">
           <Image
-            src="/images/horse_bg.jpeg"
+            src="/images/horse_bg.png"
             alt="Horse background for Falsafi hero section"
             fill
             priority

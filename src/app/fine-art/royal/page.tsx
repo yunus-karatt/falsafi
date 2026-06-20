@@ -37,7 +37,7 @@ export default function Page() {
       {/* Hero Section */}
       {/* <section className="relative min-h-[50vh] flex items-center justify-center bg-black overflow-hidden pt-28 pb-16">
         <div className="absolute inset-0 z-10">
-          <img src="/images/horse_bg.jpeg" alt="background" className="object-cover w-full h-full opacity-20" />
+          <img src="/images/horse_bg.png" alt="background" className="object-cover w-full h-full opacity-20" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-30 text-center">
