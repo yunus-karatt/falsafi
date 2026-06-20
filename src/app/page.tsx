@@ -22,7 +22,7 @@ import FaqAccordion from "@/components/FaqAccordion";
 import { servicesData } from "@/data/servicesData";
 import { portfolioData } from "@/data/portfolioData";
 
-const horse_bg = "/images/horse_bg.png";
+const horse_bg = "/images/horse_bg.jpeg";
 
 const faqs = [
   {
@@ -92,18 +92,29 @@ export default function Home() {
       <Navbar />
 
       {/* 1. Hero Section */}
-      <section className="relative min-h-screen bg-black overflow-hidden py-20 md:py-24 px-4 sm:px-6 md:px-12 flex items-center justify-center">
+      <section className="relative min-h-[calc(100vh-100px)] mt-25 bg-black overflow-hidden py-20 md:py-24 px-4 sm:px-6 md:px-12 flex items-center justify-center">
         <div className="absolute inset-0 z-10">
           <Image
             src={horse_bg}
             alt="Horse background for Falsafi hero section"
             fill
             priority
-            className="object-cover opacity-20"
+            className="object-cover opacity-60"
             sizes="100vw"
           />
         </div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-brand/5 blur-[120px] rounded-full opacity-50 pointer-events-none" />
+        {/* Subtle watermark logo in background (optional) */}
+        {/* <div className="pointer-events-none absolute left-8 bottom-8 z-20 hidden sm:block">
+          <Image
+            src="/images/logo.png"
+            alt="Falsafi watermark logo"
+            width={600}
+            height={240}
+            priority
+            className="opacity-40 w-64 md:w-[500px] h-auto object-contain"
+          />
+        </div> */}
+        {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-brand/5 blur-[120px] rounded-full opacity-0 pointer-events-none" /> */}
 
         <div className="mx-auto w-full max-w-5xl relative z-30 text-center">
           <motion.div
@@ -120,6 +131,27 @@ export default function Home() {
               The <span className="text-brand">Complete</span>
               <br className="hidden sm:block" /> Advertising Solution
             </h1>
+
+            {/* Hero logo (prominent, centered, animated) */}
+            {/*
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.25 }}
+              className="mx-auto mb-6"
+            >
+              <Link href="/" aria-label="Falsafi home" className="inline-block">
+                <Image
+                  src="/images/logo.png"
+                  alt="Falsafi logo"
+                  width={280}
+                  height={112}
+                  priority
+                  className="w-40 md:w-56 h-auto object-contain"
+                />
+              </Link>
+            </motion.div>
+            */}
 
             <p className="font-body text-zinc-300 text-sm sm:text-base md:text-lg leading-relaxed mb-7 md:mb-8">
               Launch-ready signage, branding, printing, and installation

@@ -27,7 +27,7 @@ export default function About() {
       <section className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-28 pb-16">
         <div className="absolute inset-0 w-full h-full opacity-20">
           <Image
-            src="/images/horse_bg.png"
+            src="/images/horse_bg.jpeg"
             alt="Falsafi hero background"
             fill
             className="object-cover"

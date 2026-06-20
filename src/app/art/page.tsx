@@ -90,20 +90,6 @@ const fineArtFiles = [
   "WhatsApp Image 2026-06-07 at 12.49.16 AM.jpeg",
   "WhatsApp Image 2026-06-07 at 12.52.39 AM (2).jpeg",
   "WhatsApp Image 2026-06-07 at 12.52.40 AM.jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.42 AM (1).jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.42 AM.jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.43 AM (1).jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.44 AM (1).jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.44 AM.jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.45 AM (1).jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.46 AM (1).jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.46 AM.jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.47 AM (1).jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.47 AM.jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.48 AM (1).jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.48 AM.jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.49 AM (1).jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.49 AM.jpeg",
   "WhatsApp Image 2026-06-07 at 12.52.50 AM (1).jpeg",
   "WhatsApp Image 2026-06-07 at 12.52.50 AM.jpeg",
   "WhatsApp Image 2026-06-07 at 12.52.51 AM (1).jpeg",
@@ -111,20 +97,6 @@ const fineArtFiles = [
   "WhatsApp Image 2026-06-07 at 12.52.52 AM.jpeg",
   "WhatsApp Image 2026-06-07 at 12.52.53 AM (1).jpeg",
   "WhatsApp Image 2026-06-07 at 12.52.53 AM.jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.54 AM.jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.57 AM (1).jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.57 AM.jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.58 AM (2).jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.58 AM.jpeg",
-  "WhatsApp Image 2026-06-07 at 12.52.59 AM.jpeg",
-  "WhatsApp Image 2026-06-07 at 12.53.00 AM (1).jpeg",
-  "WhatsApp Image 2026-06-07 at 12.53.00 AM.jpeg",
-  "WhatsApp Image 2026-06-07 at 12.53.01 AM (1).jpeg",
-  "WhatsApp Image 2026-06-07 at 12.53.01 AM.jpeg",
-  "WhatsApp Image 2026-06-07 at 12.53.02 AM (1).jpeg",
-  "WhatsApp Image 2026-06-07 at 12.53.02 AM.jpeg",
-  "WhatsApp Image 2026-06-07 at 12.53.03 AM (1).jpeg",
-  "WhatsApp Image 2026-06-07 at 12.53.03 AM.jpeg",
 ];
 
 const drawingGallery = drawingFiles.map((file, index) => ({
@@ -145,16 +117,15 @@ export default function FineArtAcademy() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-28 pb-16">
+      {/* <section className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-28 pb-16">
         <div className="absolute inset-0 z-10">
           <Image
-            src="/images/horse_bg.png"
+            src="/images/horse_bg.jpeg"
             alt="Falsafi hero background"
             fill
             className="object-cover opacity-20"
           />
         </div>
-        {/* Glow behind header */}
         <div className="absolute -top-20 -left-20 w-112.5 h-112.5 bg-brand/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-30 text-center">
@@ -168,10 +139,10 @@ export default function FineArtAcademy() {
             Ignite your artistic potential with structured drawing and painting classes for kids, adults, and professional hobbyists in Ajman.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Drawing Gallery Section (after hero, similar layout placement to services page) */}
-      <section className="pb-24 pt-8 min-h-150 bg-black">
+      <section className="pb-24 pt-8 mt-26 min-h-150 bg-black">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-5">
