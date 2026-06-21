@@ -1,11 +1,8 @@
-"use client";
-
-import Image from "next/image";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import MobileCTA from "@/components/MobileCTA";
+import RoyalGalleryClient from "../fine-art/royal/RoyalGalleryClient";
 
 const drawingFiles = [
   "10841171_383862318455676_1060473712_n.jpg",
@@ -99,6 +96,34 @@ const fineArtFiles = [
   "WhatsApp Image 2026-06-07 at 12.52.53 AM.jpeg",
 ];
 
+const portraitFiles = [
+  "WhatsApp Image 2026-06-21 at 4.10.43 PM.jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.42 PM (4).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.42 PM (3).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.42 PM (2).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.42 PM (1).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.42 PM.jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.41 PM (3).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.41 PM (2).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.41 PM (1).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.41 PM.jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.40 PM (1).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.40 PM.jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.39 PM (1).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.39 PM.jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.38 PM (2).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.38 PM (1).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.38 PM.jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.37 PM (1).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.37 PM.jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.36 PM (4).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.36 PM (3).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.36 PM (2).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.36 PM (1).jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.36 PM.jpeg",
+  "WhatsApp Image 2026-06-21 at 4.10.34 PM.jpeg",
+];
+
 const drawingGallery = drawingFiles.map((file, index) => ({
   id: `drawing-${index + 1}`,
   title: `Drawing Work ${index + 1}`,
@@ -109,6 +134,12 @@ const fineArtGallery = fineArtFiles.map((file, index) => ({
   id: `fineart-${index + 1}`,
   title: `Fine Art Work ${index + 1}`,
   image: `/images/fineart/${encodeURIComponent(file)}`,
+}));
+
+const portraitGallery = portraitFiles.map((file, index) => ({
+  id: `portrait-${index + 1}`,
+  title: `Portrait Work ${index + 1}`,
+  image: `/images/portraits/${encodeURIComponent(file)}`,
 }));
 
 export default function FineArtAcademy() {
@@ -153,30 +184,23 @@ export default function FineArtAcademy() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2  gap-6 md:gap-8">
-            {drawingGallery.map((item) => (
-              <div
-                key={item.id}
-                className="group relative aspect-4/3 rounded-2xl overflow-hidden bg-zinc-950 border border-zinc-900 hover:border-brand/30 transition-colors duration-300"
-              >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
+          <RoyalGalleryClient items={drawingGallery} />
+        </div>
+      </section>
 
-                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
-
-                <div className="absolute inset-x-0 bottom-0 p-5">
-                  <p className="font-body text-xs text-zinc-200 tracking-wide">
-                    {item.title}
-                  </p>
-                </div>
-              </div>
-            ))}
+      {/* Portrait Gallery Section */}
+      <section className="pb-24 pt-8 bg-black">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-5">
+              Portrait Gallery
+            </span>
+            <h2 className="font-syne text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+              Portrait Works
+            </h2>
           </div>
+
+          <RoyalGalleryClient items={portraitGallery} />
         </div>
       </section>
 
@@ -192,30 +216,7 @@ export default function FineArtAcademy() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-            {fineArtGallery.map((item) => (
-              <div
-                key={item.id}
-                className="group relative aspect-4/3 rounded-2xl overflow-hidden bg-zinc-950 border border-zinc-900 hover:border-brand/30 transition-colors duration-300"
-              >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-
-                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
-
-                <div className="absolute inset-x-0 bottom-0 p-5">
-                  <p className="font-body text-xs text-zinc-200 tracking-wide">
-                    {item.title}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <RoyalGalleryClient items={fineArtGallery} />
         </div>
       </section>
 
