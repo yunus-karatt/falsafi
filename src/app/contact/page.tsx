@@ -100,10 +100,10 @@ function ContactContent() {
                   </h4>
                   <div className="flex flex-col gap-0.5">
                     <a
-                      href="tel:06046888"
+                      href="tel:067046888"
                       className="hover:text-brand transition-colors"
                     >
-                      06046 888
+                      067046888
                     </a>
                     <a
                       href="tel:0526024699"
